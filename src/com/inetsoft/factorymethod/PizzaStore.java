@@ -8,9 +8,7 @@ package com.inetsoft.factorymethod;
 public abstract class PizzaStore {
 	
 	public Pizza orderPizza(String type) {
-		Pizza pizza = null;
-		
-		pizza = this.createPizza(type);
+		Pizza pizza = this.createPizza(type);
 		
 		pizza.prepare();
 		pizza.bake();
