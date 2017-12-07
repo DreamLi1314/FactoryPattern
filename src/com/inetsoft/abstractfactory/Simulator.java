@@ -1,9 +1,12 @@
 package com.inetsoft.abstractfactory;
 
 /**
- * Test Abstract Factory Pattern
- * @author Administrator
- *
+ * @Description: Test Abstract Factory Pattern
+ * @Warning: 
+ * @Author DreamLi
+ * @Package FactoryPattern  --  com.inetsoft.abstractfactory.Simulator
+ * @Date: 2017年12月7日 上午8:02:33
+ * @Version: 1.0.0
  */
 public class Simulator {
 	public static void main(String[] args) throws Exception {
