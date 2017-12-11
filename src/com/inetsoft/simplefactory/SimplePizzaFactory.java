@@ -6,7 +6,7 @@ package com.inetsoft.simplefactory;
  */
 public class SimplePizzaFactory {
 
-	private static SimplePizzaFactory factory;
+	private static volatile SimplePizzaFactory factory;
 
 	private SimplePizzaFactory() {
 		super();
@@ -14,7 +14,11 @@ public class SimplePizzaFactory {
 
 	public static SimplePizzaFactory newInstance() {
 		if (factory == null) {
-			factory = new SimplePizzaFactory();
+			synchronized (SimplePizzaFactory.class) {
+				if (factory == null) {
+					factory = new SimplePizzaFactory();
+				}
+			}
 		}
 
 		return factory;
